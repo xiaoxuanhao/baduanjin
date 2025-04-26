@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>‌第八式：背后七颠百病消‌‌‌‌‌</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 保持与第一式相同的样式 */
+        .video-container {
+            max-width: 450px;
+            margin: 30px auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        video {
+            width: 100%;
+            height: 600px;
+        }
+
+        .content-section {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin: 40px 0;
+            padding: 20px;
+        }
+
+        .content-img {
+            flex: 1;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
+        .content-text {
+            flex: 2;
+            line-height: 1.8;
+            color: #444;
+        }
+        .video-container, .decomposition-img {
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.video-container:hover, .decomposition-img:hover {
+    transform: scale(1.02);
+}
+        .logo {
+  font-family: 'STXingkai', cursive; /* 需引入书法字体 */
+  font-size: 1.8rem;
+  color: #fff;
+  background: #2d5a27;
+  padding: 8px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 2px solid #81c784;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, 
+    transparent, 
+    rgba(255,255,255,0.2), 
+    transparent);
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+.logo:hover {
+  box-shadow: 0 0 15px rgba(45,90,39,0.3);
+  transform: scale(1.05);
+}
+
+.logo:hover::before {
+  animation: shine 1.5s;
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+/* 新增样式 */
+.action-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.video-container {
+    position: relative;
+     /* padding-top: 56.25%;16:9比例 */
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-container video {
+    /* position: absolute;  */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.decomposition-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.right-column {
+    background: #f8faf8;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.action-steps {
+    padding-left: 25px;
+    margin: 20px 0;
+    counter-reset: step-counter;
+}
+
+.action-steps li {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    line-height: 1.6;
+}
+
+.action-steps li::before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background: #2d5a27;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    font-size: 0.9em;
+}
+
+.tcm-title {
+    color: #2d5a27;
+    margin: 30px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #81c784;
+}
+
+.tcm-desc {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    line-height: 1.8;
+    color: #37474f;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .action-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .right-column {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .action-steps li {
+        padding-left: 25px;
+    }
+    
+    .action-steps li::before {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+}
+
+.btn{
+    font-family: 'STXingkai', cursive; /* 需引入书法字体 */
+  font-size: 1.8rem;
+  color: #fff;
+  background: #2d5a27;
+  padding: 8px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 2px solid #81c784;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, 
+    transparent, 
+    rgba(255,255,255,0.2), 
+    transparent);
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+.logo:hover {
+  box-shadow: 0 0 15px rgba(45,90,39,0.3);
+  transform: scale(1.05);
+}
+
+.logo:hover::before {
+  animation: shine 1.5s;
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+
+}
+        @media (max-width: 768px) {
+            .content-section {
+                flex-direction: column;
+            }
+            .content-img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="八段锦首页.html" class="logo">首页</a>
+        </div>
+    </nav>
+
+    <!-- 内容主体 -->
+    <main class="container">
+        <h1 class="section-title">‌第八式：背后七颠百病消‌‌‌‌‌‌</h1>
+        
+        <div class="action-layout">
+            <!-- 左侧区域 -->
+            <div class="left-column">
+                <div class="video-container">
+                    <video controls poster="视频封面/2025_04_24_演示文稿1_01(7)/演示文稿1_01(7).png">
+                       <source src="视频/c03dd50aa2612c64062dac9ad34ca0d8.mp4" type="video/mp4">
+                        您的浏览器不支持视频标签
+                    </video>
+                </div>
+               
+            </div>
+    
+            <!-- 右侧区域 -->
+            <div class="right-column">
+                <div class="text-content">
+                    <h2>动作要领</h2>
+                    <ol class="action-steps">
+                        <li>双脚并拢</li>
+                        <li>双手自然下垂</li>
+                        <li>脚跟提起后轻震地面7次</li>
+                        <li>全身放松调息</li>
+                    </ol>
+    
+                    <h2 class="tcm-title">中医原理</h2>
+                    <p class="tcm-desc">通过震动疏通经络，调和全身气血，预防跌倒‌。</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 导航按钮 -->
+        <div class="action-nav">
+            <a href="action7.html" class="btn">上一式</a>
+            <a href="action1.html" class="btn">下一式</a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 江西警察学院2443制作</p>
+        </div>
+    </footer>
+</body>
+</html>

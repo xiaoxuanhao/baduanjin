@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link href="https://fonts.loli.net/css?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>八段锦文化传承</title>
+    <style>
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+
+        /* 轮播图容器 */
+        .carousel {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 轮播图片样式 */
+        .carousel-inner {
+            display: flex;
+            transition: transform 1s;
+            height: 100%;
+            animation: carousel 21s infinite; /* 7张×3秒=21秒 */
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0; /* 禁止图片缩小 */
+            background-color: #4c574a;/* 图片加载失败时显示 */
+        }
+
+        /* 文字介绍通用样式 */
+        .section {
+            padding: 50px 20px;
+            line-height: 1.8;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            color: #2d5a27;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        /* 修改目录导航样式 */
+.directory-nav {
+    /* 
+    display: flex;
+     flex-direction: column;*/
+    
+    
+    display: flex;
+    flex-wrap: wrap; /* 允许按钮换行 */
+    justify-content: center; /* 水平居中 */
+    gap: 2%; /* 按钮间距 */
+    max-width: 1200px; /* 控制最大宽度 */
+    margin: 0 auto; /* 水平居中 */
+    padding: 20px 5%; /* 左右留白 */
+}
+
+.directory-item {
+    /*  background: linear-gradient(145deg, #f8f8f8 0%, #ffffff 100%);
+  border-radius: 5px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid #902525;  */
+   
+ 
+  flex: 1 1 200px; /* 最小宽度200px自适应 */
+    margin: 10px;
+    background: linear-gradient(145deg, #f8f8f8 0%, #ffffff 100%);
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 1px solid #902525;
+    box-sizing: border-box; /* 确保边框计入宽度 */
+    min-width: 250px; /* 保持按钮最小宽度 */
+    max-width: 300px; /* 防止按钮过宽 */
+}
+.directory-item::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 15px,
+    rgba(193, 177, 11, 0.945) 15px,
+    rgba(19, 219, 92, 0.768) 30px
+  );
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.directory-item:hover {
+  box-shadow: 3px 3px 10px rgba(230, 6, 129, 0.1);
+}
+
+.directory-item:hover::before {
+  opacity: 0.3;
+}
+
+.directory-item h3 {
+  color: #a5b235;
+  font-size: 1.4em;
+  margin-bottom: 8px;
+  font-family: 'STXingkai', cursive; /* 需引入书法字体 */
+}
+
+.directory-item p {
+  color: #bf16d1;
+  font-size: 0.9em;
+}
+
+
+/* 手机端优化 */
+@media (max-width: 768px) {
+    .directory-nav {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .directory-item {
+        flex-basis: calc(50% - 15px); /* 两列布局 */
+        max-width: none;
+    }
+}
+@media (max-width: 480px) {
+    .directory-item {
+        flex-basis: 100%; /* 单列布局 */
+    }
+}
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .carousel {
+                height: 300px;
+            }
+
+            .section {
+                padding: 30px 15px;
+            }
+
+            .directory-nav {
+                gap: 20px;
+            }
+        }
+
+
+        /* 新增动画定义 */
+@keyframes carousel {
+   
+    0% { transform: translateX(0); }          /* 第1张 */
+    14.28% { transform: translateX(-100%); }   /* 第2张 */
+    28.57% { transform: translateX(-200%); }  /* 第3张 */
+    42.85% { transform: translateX(-300%); }  /* 第4张 */
+    57.14% { transform: translateX(-400%); }  /* 第5张 */
+    71.42% { transform: translateX(-500%); }  /* 第6张 */
+    85.71% { transform: translateX(-600%); }  /* 第7张 */
+    100% { transform: translateX(0); }        /* 复位到第1张 */
+}
+
+   
+    </style>
+</head>
+<body>
+    <!-- 轮播图 -->
+    <div class="carousel">
+        <div class="carousel-inner">
+          
+            <!-- 轮播项（需要替换实际图片路径） -->
+            <div class="carousel-item" style="background-image: url(海报/0b5a4512a2b664e2370a4deee1a010a.png)"></div>
+            <div class="carousel-item" style="background-image: url(海报/96c01ba172445081527694e6bca06db.png)"></div>
+            <div class="carousel-item" style="background-image: url(海报/577b0d5bcc581527148d5243b65e471.png)"></div>
+            <div class="carousel-item" style="background-image: url(海报/af896e52680c001939b1bdbee2285b5.png)"></div>
+            <div class="carousel-item" style="background-image: url(海报/e3cb2bdd1222b64a70a6196c49fc621.png)"></div>
+            <div class="carousel-item" style="background-image: url(海报/f657ff5f31c472fe28d48a1e74d41d9.png)"></div>
+            <div class="carousel-item" style="background-image: url(海报/57e60cc6d19f2134dc2c723ff1212fc.png)"></div>
+
+        </div>
+    </div>
+   
+    <!-- 首段文字介绍 -->
+    <section class="section">
+        <h2>八段锦简介</h2>
+        <p>八段锦是中国传统养生功法，起源于宋代，由八个动作组成。其动作舒展优美，如锦缎般优美柔顺，故称为"锦"。本功法融合了中医经络理论和传统导引术，通过特定的肢体动作配合呼吸调节，达到强身健体、调理脏腑的功效。</p>
+    </section>
+
+    <!-- 修改后的目录导航 -->
+<div class="directory">
+    <nav class="directory-nav">
+        <!-- 第一式 -->
+        <div class="directory-item" 
+             onclick="window.location.href='action1.html'">
+            <h3>第一式</h3>
+            <p>两手托天理三焦</p>
+        </div>
+
+        <!-- 第二式 -->
+        <div class="directory-item" 
+             onclick="window.location.href='action2.html'">
+            <h3>第二式</h3>
+            <p>左右开弓似射雕</p>
+        </div>
+
+        <!-- 第三式 -->
+        <div class="directory-item" 
+             onclick="window.location.href='action3.html'">
+            <h3>第三式</h3>
+            <p>调理脾胃须单举</p>
+        </div>
+
+        <!-- 第四式 -->
+        <div class="directory-item" 
+             onclick="window.location.href='action4.html'">
+            <h3>第四式</h3>
+            <p>五劳七伤向后瞧</p>
+        </div>
+
+        <!-- 第五式 -->
+        <div class="directory-item" 
+             onclick="window.location.href='action5.html'">
+            <h3>第五式</h3>
+            <p>摇头摆尾去心火</p>
+        </div>
+
+        <!-- 第六式 -->
+        <div class="directory-item" 
+             onclick="window.location.href='action6.html'">
+            <h3>第六式</h3>
+            <p>两手攀足固肾腰</p>
+        </div>
+
+        <!-- 第七式 -->
+        <div class="directory-item" 
+             onclick="window.location.href='action7.html'">
+            <h3>第七式</h3>
+            <p>攒拳怒目增气力</p>
+        </div>
+
+        <!-- 第八式 -->
+        <div class="directory-item" 
+             onclick="window.location.href='action8.html'">
+            <h3>第八式</h3>
+            <p>背后七颠百病消</p>
+        </div>
+    </nav>
+</div>
+
+    <!-- 意义介绍 -->
+    <section class="section">
+        <h2>传承与保护</h2>
+        <p>八段锦作为国家级非物质文化遗产，承载着中华民族的养生智慧。近年来，国家体育总局已将八段锦纳入全民健身推广项目，各大高校也相继开设传统养生课程。本网站旨在通过数字化手段，让这一传统文化瑰宝在新时代焕发新生。</p>
+        <br>
+        <p>保护措施包括：建立标准化教学体系、开展校园传承活动、开发数字化教学资源等。我们呼吁更多年轻人加入传统文化传承的行列，让八段锦的养生智慧惠及更多人。</p>
+    </section>
+    <div class="container">
+        <p>
+                 © 江西警察学院2443制作
+            
+            
+            建议请提至邮箱：2953213052@qq.com
+        </p>
+    </div>
+</body>
+</html>
